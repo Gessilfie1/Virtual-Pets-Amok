@@ -9,14 +9,14 @@ import org.junit.Test;
 public class RoboDogTest {
 	
 	RoboDog underTest = new RoboDog("name", "description");
-	VirtualPetAmok RoboDog1 = new VirtualPetAmok();
+	
 	
 	@Test
 	public void shouldBeAbleToOilRoboPet() {
 		
-		int rustLevelBefore = RoboDog1.getRustLevel();
-		underTest.oil(RoboDog1);
-		int rustLevelAfter = RoboDog1.getRustLevel();
+		int rustLevelBefore = underTest.getRustLevel();
+		underTest.giveOil();
+		int rustLevelAfter = underTest.getRustLevel();
 		assertThat(rustLevelAfter - rustLevelBefore, is (5));
 	}
 	

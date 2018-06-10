@@ -8,9 +8,12 @@ public class ODog extends Organic implements Walkable {
 
 	@Override
 	public void walkDog(VirtualPetAmok Dogs) {
-		this.happiness(5);
-		this.makeWaste(-5);
+		Dogs.happiness(+2);
+		
+		
 	}
+
+
 
 
 

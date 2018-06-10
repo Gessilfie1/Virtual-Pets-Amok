@@ -1,5 +1,6 @@
 package virtualpetsamok;
 
+import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.Matchers.contains;
 import static org.hamcrest.Matchers.containsInAnyOrder;
 import static org.junit.Assert.assertEquals;
@@ -12,6 +13,8 @@ import org.junit.Test;
 public class PetShelterAmokTest {
 	
 	PetShelterAmok shelter = new PetShelterAmok();
+	ODog oDog = new ODog("1", "");
+	OCat oCat = new OCat("2", "");
 	
 	@Test
 	public void shouldBeAbleToAddPet() {
@@ -24,8 +27,6 @@ public class PetShelterAmokTest {
 	
 	@Test
 	public void shouldBeAbleToAddTwoDifferentPets() {
-		ODog oDog = new ODog("1", "");
-		OCat oCat = new OCat("2", "");
 		shelter.addPet(oDog);
 		shelter.addPet(oCat);
 		
@@ -34,5 +35,7 @@ public class PetShelterAmokTest {
 		assertEquals(2, check.size());
 		assertThat(check, containsInAnyOrder(oDog, oCat));
 	}
+	
+
 
 }

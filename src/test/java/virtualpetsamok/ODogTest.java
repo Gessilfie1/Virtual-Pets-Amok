@@ -16,7 +16,7 @@ public class ODogTest {
 	public void shouldBeAbleToIncreaseHealth() {
 		
 		int healthLevelBefore = underTest.getHealthLevel();
-		underTest.walkDog();
+		underTest.cleanCage();
 		 int healthLevelAfter = underTest.getHealthLevel();
 		assertThat(healthLevelAfter - healthLevelBefore, is(5));
 	}
@@ -25,25 +25,25 @@ public class ODogTest {
 	public void shouldBeAbleToIncreaseHappiness() {
 		
 		int happyLevelBefore = underTest.getHappyLevel();
-		underTest.cleanCage(Odog1);
-		int happyLevelAfter = Odog1.getHappyLevel();
+		underTest.removewaste();
+		int happyLevelAfter = underTest.getHappyLevel();
 		assertThat(happyLevelBefore - happyLevelAfter, is(5));
 	}
 	
 	@Test
 	public void shouldBeAbleToFeed() {
 		
-		int hungerLevelBefore = Odog1.getHunger();
-		underTest.feed(Odog1);
-		int hungerLevelAfter = Odog1.getHunger();
+		int hungerLevelBefore = underTest.getHunger();
+		underTest.giveFood(5);;
+		int hungerLevelAfter = underTest.getHunger();
 		assertThat(hungerLevelAfter - hungerLevelBefore, is (5));
 	}
 	
 	@Test
 	public void shouldBeAbleToWater()	{
-		int thirstLevelBefore = Odog1.getThirst();
-		underTest.water(Odog1);
-		int thirstLevelAfter = Odog1.getThirst();
+		int thirstLevelBefore = underTest.getThirst();
+		underTest.water();
+		int thirstLevelAfter = underTest.getThirst();
 		assertThat(thirstLevelAfter - thirstLevelBefore, is(5));
 	}
 	

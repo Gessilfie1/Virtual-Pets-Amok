@@ -6,9 +6,7 @@ public class OCat extends Organic {
 		super(name, description);
 	}
 
-	public void emptyLitterBox() {
-		this.removewaste(5);
-	}
+
 
 	@Override
 	public String getPetType() {

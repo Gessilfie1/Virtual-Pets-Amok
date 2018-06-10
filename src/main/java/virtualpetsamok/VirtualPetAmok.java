@@ -5,8 +5,8 @@ public abstract class VirtualPetAmok implements Comparable<VirtualPetAmok> {
 	private String petName;
 	private String petDescription;
 
-	private static final int DEFAULT_HAPPY_LEVEL = 10;
-	private static final int DEFAULT_HEALTH_LEVEL = 20;
+	private static final int DEFAULT_HAPPY_LEVEL = 5;
+	private static final int DEFAULT_HEALTH_LEVEL = 5;
 	protected int healthLevel = DEFAULT_HEALTH_LEVEL;
 	protected int happyLevel = DEFAULT_HAPPY_LEVEL;
 	
@@ -32,7 +32,8 @@ public abstract class VirtualPetAmok implements Comparable<VirtualPetAmok> {
 	public VirtualPetAmok(String name, String description) {
 		this.petName = name;
 		this.petDescription = description;
-				
+		
+		
 	}
 	
 	public String getPetName() {
@@ -55,8 +56,12 @@ public abstract class VirtualPetAmok implements Comparable<VirtualPetAmok> {
 	}
 
 	public void happiness(int amount) {
-		healthLevel += amount;
+		happyLevel += amount;
 		
+	}
+	
+	public void healthiness(int amount) {
+		healthLevel += amount;
 	}
 	
 	public abstract String getPetType();

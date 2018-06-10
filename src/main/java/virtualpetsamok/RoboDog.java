@@ -8,7 +8,7 @@ public class RoboDog extends Robotic implements Walkable {
 
 	@Override
 	public void walkDog(VirtualPetAmok dogs) {
-		dogs.happiness(5);
+		dogs.happiness(+2);
 
 	}
 
